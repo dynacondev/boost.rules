@@ -152,7 +152,6 @@ boost_modules = [
 
 # Call the macro with the list of targets to generate the aliases
 create_boost_aliases(
-    alias_target = "@boost",
     target_list = boost_modules,
     visibility = ["//visibility:public"],
 )
