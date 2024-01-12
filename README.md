@@ -2,7 +2,7 @@
 
 This repository provides the simplest way to get [Boost](https://boost.org) into your [Bazel](https://bazel.build) project!  
 
-It is provided as a convenient way to include ALL of the Boost libraries into a project at once. It is intended for those who don't want to "bazel_dep" every single boost library they need, and while it is slightly less internet efficient (as it downloads all of boost), it will still only build the parts you need, and you can then depend on any module with a simple `@boost//:libraryName`
+It is provided as a convenient way to include ALL of the Boost libraries into a project at once. It is intended for those who don't want to "bazel_dep" every single boost library they need. Thanks to Bazel's dependency resolution system, it will still only build the parts you need, and you can then depend on any module with a simple `@boost//:libraryName`. You can even mix and match between using `@boost//:libraryName` targets and directly using boost modules - `@libraryName//:target`, just try to use the same boost release version in both to avoid weird compile issues!
 
 ## 👨‍💻 Usage
 
