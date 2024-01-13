@@ -14,14 +14,9 @@ def create_boost_aliases(target_list, **kwargs):
       **kwargs: Additional arguments to pass to the alias rule
     """
     for target in target_list:
-        if "." in target:  # Check if there is a dot in the target
-            rule_name = target.split(".")[-1]  # If so, get the last segment. This will be the rule name
-        else:
-            rule_name = target
-
         # Define the alias
         native.alias(
             name = target,
-            actual = "@boost." + target + "//:" + rule_name,
+            actual = "@boost." + target,
             **kwargs
         )
