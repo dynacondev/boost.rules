@@ -2,6 +2,8 @@
 Hey there! The purpose of this module is to provide a convenient way for a user to depend upon all boost libraries as a single module.
 All the boost libraries are aliased and accessible by using the syntax @boost//:libraryName
 
+It's also essential as it is depended upon by all the boost modules. This means it's a circular dependency, which is intentional! It allows us to make sure boost modules never get mix and matched versions! All modules will always be resolved to the highest common version.
+
 This file is from https://github.com/dynacondev/boost.rules
 If you're looking to maintain or edit some Boost Modules from the BCR, check out https://github.com/dynacondev/boost.rules.tools for the tool you'll need! Happy Coding!
 """
